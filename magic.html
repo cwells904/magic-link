@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Verifying...</title>
+</head>
+<body>
+  <p>Verifying your account…</p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get("userId");
+    const token = urlParams.get("token");
+
+    const workflowURL = "YOUR_WORKFLOW_ENDPOINT_URL";
+
+    fetch(workflowURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        userId: userId,
+        token: token
+      })
+    })
+    .then(r => {
+      if (r.ok) {
+        document.body.innerHTML = "<h2>You're verified!</h2>";
+      } else {
+        document.body.innerHTML = "<h2>Verification failed.</h2>";
+      }
+    })
+    .catch(() => {
+      document.body.innerHTML = "<h2>Error contacting server.</h2>";
+    });
+  </script>
+</body>
+</html>
