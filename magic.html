@@ -12,7 +12,7 @@
     const userId = urlParams.get("userId");
     const token = urlParams.get("token");
 
-    const workflowURL = "https://e-oscar-qa.workflows.oktapreview.com/api/flo/71260ce45f3c62dff27e7c19df26a3b2/invoke/verify?userId={{userId}}&token={{token}}";
+    const workflowURL = "https://e-oscar-qa.workflows.oktapreview.com/api/flo/71260ce45f3c62dff27e7c19df26a3b2/invoke";
 
     fetch(workflowURL, {
       method: "POST",
