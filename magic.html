@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Verifying...</title>
+  <title>Verifying... Thank you for your patience.</title>
 </head>
 <body>
   <p>Verifying your account…</p>
@@ -26,9 +26,9 @@
     })
     .then(r => {
       if (r.ok) {
-        document.body.innerHTML = "<h2>You're verified!</h2>";
+        document.body.innerHTML = "<h2>You're verified and your account is no longer suspended.  You can now use your original password to login or the forgot password link on the sign on page.  Please note, you must login before midnight otherwise your account will become suspended again.</h2>";
       } else {
-        document.body.innerHTML = "<h2>Verification failed.</h2>";
+        document.body.innerHTML = "<h2>Verification failed. Please contact the eOscar service desk for additional help</h2>";
       }
     })
     .catch(() => {
