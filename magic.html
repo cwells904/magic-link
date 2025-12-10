@@ -5,7 +5,7 @@
   <title>Verifying... Thank you for your patience.</title>
 </head>
 <body>
-  <p>Verifying your account… Thank you for your patience.</p>
+  <p>Verifying your account… </p>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -28,8 +28,7 @@
       if (r.ok) {
         document.body.innerHTML = "<h2>You're verified and your account is no longer suspended. You've been sent an email with a forgot password link. Please use that to reset your password and login.  Please note, you must login before midnight tonight otherwise your account will become suspended again.</h2>";
       } else {
-        document.body.innerHTML = "<h2>Verification has failed.</h2>
-        <h2> Please contact the eOscar service desk for additional help</h2>";
+        document.body.innerHTML = "<h2>Verification has failed. Please contact the eOscar service desk for additional help</h2>";
       }
     })
     .catch(() => {
